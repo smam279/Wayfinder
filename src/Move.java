@@ -8,9 +8,9 @@ package src;
  */
 public interface Move 
 {
-    int getForward();
+    public int getForward();
 
-    int getTurn();
+    public int getTurn();
 
-    int getStrafe();
+    public int getStrafe();
 }

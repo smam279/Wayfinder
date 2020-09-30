@@ -6,7 +6,7 @@ public class Position {
     double positionPrecision;
     double headingPrecision;
 
-    Position()
+    public Position()
     {
         x = 0;
         y = 0;
@@ -16,12 +16,12 @@ public class Position {
         headingPrecision = 0;
     }
 
-    double hypot(double a, double b)
+    private double hypot(double a, double b)
     {
         return Math.sqrt((a*a) + (b*b));
     }
 
-    boolean comparePositions(Position other)
+    public boolean comparePositions(Position other)
     {
 
         if (hypot(Math.abs(other.x - x), Math.abs(other.y - y)) 

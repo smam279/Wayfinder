@@ -16,7 +16,7 @@ public class Wayfinder
     double robot_strafeMultiplier; //calculated outside of this code from the drivetrain,
                                    // e.g. from mecanum wheel caster angle
 
-    Wayfinder() 
+    public Wayfinder() 
     {
         currentPosition = new Position();
         currentPosition.useHeading = true;
@@ -29,14 +29,14 @@ public class Wayfinder
         robot_encoder_cpr = 0;
     }
 
-    void setPose(double x, double y, double heading) 
+    public void setPose(double x, double y, double heading) 
     {
         currentPosition.x = x;
         currentPosition.y = y;
         currentPosition.heading = heading;
     }
 
-    void setRobotCharacteristics(double wheelbase, double wheeltrack, double wheelradius, double encoder_cpr) 
+    public void setRobotCharacteristics(double wheelbase, double wheeltrack, double wheelradius, double encoder_cpr) 
     {
         robot_wheel_base = wheelbase; //distance between front wheels and back wheels
         robot_wheel_track = wheeltrack; //distance between left wheels and right wheels
@@ -49,7 +49,7 @@ public class Wayfinder
         robot_rotationPerCount = ((Math.PI * robot_wheel_track) / robot_distancePerCount) / 2;
     }
 
-    void update_TranslateForward(double forwardCounts)
+    private void update_TranslateForward(double forwardCounts)
     {
         double forwardDistance = forwardCounts * robot_distancePerCount;
 
@@ -60,7 +60,7 @@ public class Wayfinder
         currentPosition.y += y_Distance;
     }
 
-    void update_Rotate(double rotationCounts)
+    private void update_Rotate(double rotationCounts)
     {
         //rotationCounts should be the total distance between the "left" encoder 
         // counts and the "right" encoder counts, meaning it's equivalent to two
@@ -72,7 +72,7 @@ public class Wayfinder
 
     }
 
-    void update_TranslateStrafe(double strafeCounts)
+    private void update_TranslateStrafe(double strafeCounts)
     {
         double strafeDistance = strafeCounts * robot_distancePerCount * robot_strafeMultiplier;
 
@@ -83,7 +83,7 @@ public class Wayfinder
         currentPosition.y += y_Distance;
     }
 
-    void update(Move movement) 
+    public void update(Move movement) 
     {
         double totalTurn = movement.getTurn();
 

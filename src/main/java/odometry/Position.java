@@ -21,11 +21,11 @@ public class Position {
         return Math.sqrt((a*a) + (b*b));
     }
 
-    public boolean comparePositions(Position other)
+    public boolean intersects(Position other)
     {
 
         if (hypot(Math.abs(other.x - x), Math.abs(other.y - y)) 
-            < other.positionPrecision + positionPrecision)
+            <= other.positionPrecision + positionPrecision)
         {
             
             if (useHeading && other.useHeading)

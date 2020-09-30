@@ -93,6 +93,6 @@ public class Wayfinder
         update_Rotate(totalTurn / 2); //finish the turn
         
         //this should be more than accurate enough if the movements are being calculated every
-        // fraction of a second; if not, its easy enough to change
+        // fraction of a second; if not, its easy enough to improve the precision
     }
 }

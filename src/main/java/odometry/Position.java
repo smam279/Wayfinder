@@ -1,4 +1,4 @@
-package src;
+package Wayfinder.src.main.java.odometry;
 
 public class Position {
     double x, y, heading;

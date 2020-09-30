@@ -1,4 +1,4 @@
-package odometry;
+package Wayfinder.src.test.java.odometry;
 
 import static org.junit.Assert.assertTrue;
 

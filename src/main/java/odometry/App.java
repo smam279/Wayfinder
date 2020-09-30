@@ -1,4 +1,4 @@
-package odometry;
+package Wayfinder.src.main.java.odometry;
 
 /**
  * Hello world!

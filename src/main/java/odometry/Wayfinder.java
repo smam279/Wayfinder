@@ -3,7 +3,7 @@
  * by: Sam Rooney
  * 
  */
-package src;
+package Wayfinder.src.main.java.odometry;
 
 public class Wayfinder 
 {

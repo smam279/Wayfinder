@@ -1,4 +1,4 @@
-package Wayfinder.src.main.java.odometry;
+package odometry;
 
 /**
  * Move interface

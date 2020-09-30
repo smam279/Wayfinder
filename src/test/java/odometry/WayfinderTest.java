@@ -1,4 +1,4 @@
-package Wayfinder.src.test.java.odometry;
+package odometry;
 
 public class WayfinderTest 
 {
